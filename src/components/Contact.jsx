@@ -51,10 +51,10 @@ function Contact() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Contact</p>
-          <h2 className="section-title mt-4">Let’s build something clean, useful, and memorable.</h2>
+          <p className="section-eyebrow text-sm font-semibold uppercase tracking-[0.24em]">Contact</p>
+          <h2 className="section-title mt-4">Let&apos;s build something clean, useful, and memorable.</h2>
           <p className="section-copy">
-            Whether it’s a role, a collaboration, or a product idea, I’m always open to good
+            Whether it&apos;s a role, a collaboration, or a product idea, I&apos;m always open to good
             conversations about design-minded engineering and modern web experiences.
           </p>
 
@@ -71,7 +71,7 @@ function Contact() {
                   rel={external ? 'noreferrer' : undefined}
                   className="glass-panel flex items-center gap-4 rounded-[1.5rem] p-4 transition hover:translate-x-2"
                 >
-                  <div className="rounded-2xl bg-white/8 p-3 text-sky-300">
+                  <div className="accent-icon rounded-2xl p-3">
                     <Icon />
                   </div>
                   <div>
@@ -100,10 +100,10 @@ function Contact() {
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                className="rounded-2xl border border-white/10 bg-white/6 px-4 py-3 outline-none transition focus:border-sky-300/50"
+                className="input-surface rounded-2xl px-4 py-3 outline-none transition"
                 placeholder="Your name"
               />
-              {errors.name ? <span className="text-sm text-amber-300">{errors.name}</span> : null}
+              {errors.name ? <span className="error-text text-sm">{errors.name}</span> : null}
             </label>
             <label className="grid gap-2">
               <span className="text-sm font-medium">Email</span>
@@ -112,10 +112,10 @@ function Contact() {
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                className="rounded-2xl border border-white/10 bg-white/6 px-4 py-3 outline-none transition focus:border-sky-300/50"
+                className="input-surface rounded-2xl px-4 py-3 outline-none transition"
                 placeholder="you@example.com"
               />
-              {errors.email ? <span className="text-sm text-amber-300">{errors.email}</span> : null}
+              {errors.email ? <span className="error-text text-sm">{errors.email}</span> : null}
             </label>
             <label className="grid gap-2">
               <span className="text-sm font-medium">Message</span>
@@ -124,10 +124,10 @@ function Contact() {
                 value={form.message}
                 onChange={handleChange}
                 rows="6"
-                className="rounded-2xl border border-white/10 bg-white/6 px-4 py-3 outline-none transition focus:border-sky-300/50"
+                className="input-surface rounded-2xl px-4 py-3 outline-none transition"
                 placeholder="Tell me about the opportunity or project."
               />
-              {errors.message ? <span className="text-sm text-amber-300">{errors.message}</span> : null}
+              {errors.message ? <span className="error-text text-sm">{errors.message}</span> : null}
             </label>
             <button
               type="submit"
@@ -136,7 +136,7 @@ function Contact() {
               Send Message
             </button>
             {submitted ? (
-              <p className="text-sm text-emerald-300">
+              <p className="success-text text-sm">
                 Message validated successfully. Hook this form to EmailJS, Formspree, or your preferred service when you are ready.
               </p>
             ) : null}

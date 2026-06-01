@@ -16,7 +16,7 @@ function About() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">About Me</p>
+          <p className="section-eyebrow text-sm font-semibold uppercase tracking-[0.24em]">About Me</p>
           <h2 className="section-title mt-4">Building modern products with clarity, motion, and purpose.</h2>
           <p className="section-copy">
             I enjoy turning ideas into polished web experiences that balance aesthetics with
@@ -40,7 +40,7 @@ function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
-                className="rounded-2xl border border-white/10 bg-white/6 p-4"
+                className="surface-card rounded-2xl p-4"
               >
                 <div className="text-sm text-[color:var(--muted)]">{item.label}</div>
                 <div className="mt-3 font-display text-xl font-bold">{item.value}</div>

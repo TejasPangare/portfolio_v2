@@ -18,7 +18,7 @@ function Projects() {
     <section id="projects" className="section-shell py-14 sm:py-20">
       <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Projects</p>
+          <p className="section-eyebrow text-sm font-semibold uppercase tracking-[0.24em]">Projects</p>
           <h2 className="section-title mt-4">Selected work across UI, backend, and AI product ideas.</h2>
           <p className="section-copy">
             These projects reflect how I approach problem solving, presentation quality, and modern
@@ -35,7 +35,7 @@ function Projects() {
               className={`rounded-full px-4 py-2 text-sm transition ${
                 activeFilter === filter
                   ? 'bg-[color:var(--accent-strong)] text-slate-950'
-                  : 'border border-white/10 bg-white/6 text-[color:var(--muted)] hover:text-[color:var(--text)]'
+                  : 'surface-pill text-[color:var(--muted)] hover:text-[color:var(--text)]'
               }`}
             >
               {filter}
@@ -78,7 +78,7 @@ function Projects() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full border border-white/10 bg-white/6 px-3 py-2 text-xs uppercase tracking-[0.18em]"
+                      className="surface-pill rounded-full px-3 py-2 text-xs uppercase tracking-[0.18em]"
                     >
                       {tech}
                     </span>
@@ -89,7 +89,7 @@ function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/8 px-4 py-2 text-sm font-semibold transition group-hover:translate-x-1"
+                    className="surface-pill inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition group-hover:translate-x-1"
                   >
                     <FiGithub />
                     GitHub

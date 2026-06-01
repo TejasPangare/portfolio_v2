@@ -11,7 +11,7 @@ function Hero({ onContactClick }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex max-w-full rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-center text-xs text-sky-200 sm:text-sm"
+            className="accent-chip inline-flex max-w-full rounded-full px-4 py-2 text-center text-xs sm:text-sm"
           >
             Software Developer | Frontend and Full Stack Builder
           </motion.span>
@@ -49,7 +49,7 @@ function Hero({ onContactClick }) {
             <button
               type="button"
               onClick={onContactClick}
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/12 bg-white/8 px-6 py-3 font-semibold transition hover:translate-y-[-2px]"
+              className="surface-pill inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-semibold transition hover:translate-y-[-2px]"
             >
               Contact Me
               <FiArrowRight />
@@ -70,7 +70,7 @@ function Hero({ onContactClick }) {
           >
             <div className="absolute inset-x-10 top-0 h-40 rounded-full bg-sky-400/25 blur-3xl" />
             <div className="absolute -bottom-16 right-0 h-44 w-44 rounded-full bg-fuchsia-400/18 blur-3xl" />
-            <div className="relative rounded-[1.6rem] border border-white/10 bg-slate-950/40 p-5 text-center sm:p-8">
+            <div className="contrast-panel relative rounded-[1.6rem] p-5 text-center sm:p-8">
               <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-[2rem] bg-gradient-to-br from-sky-300 via-cyan-200 to-amber-200 text-4xl font-extrabold text-slate-950 shadow-2xl sm:h-40 sm:w-40 sm:text-5xl">
                 T
               </div>
@@ -84,7 +84,7 @@ function Hero({ onContactClick }) {
                   ['Experience', '1.5Y'],
                   ['Focus', 'UI + AI'],
                 ].map(([label, value]) => (
-                  <div key={label} className="rounded-2xl border border-white/10 bg-white/6 p-3">
+                  <div key={label} className="surface-card rounded-2xl p-3">
                     <div className="text-xs uppercase tracking-[0.16em] text-[color:var(--muted)]">
                       {label}
                     </div>

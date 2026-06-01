@@ -18,11 +18,11 @@ const education = [
 function Education() {
   return (
     <section id="education" className="section-shell py-14 sm:py-20">
-      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Education</p>
+      <p className="section-eyebrow text-sm font-semibold uppercase tracking-[0.24em]">Education</p>
       <h2 className="section-title mt-4">Academic milestones that shaped my technical base.</h2>
 
       <div className="relative mt-12 space-y-6">
-        <div className="absolute left-4 top-0 hidden h-full w-px bg-white/10 md:block" />
+        <div className="contrast-line absolute left-4 top-0 hidden h-full w-px md:block" />
         {education.map((item, index) => (
           <motion.article
             key={item.degree}
@@ -39,11 +39,11 @@ function Education() {
                   <h3 className="font-display text-2xl font-bold">{item.degree}</h3>
                   <p className="mt-2 text-lg text-[color:var(--muted)]">{item.institution}</p>
                 </div>
-                <span className="rounded-full border border-white/10 bg-white/6 px-4 py-2 text-sm text-[color:var(--muted)]">
+                <span className="surface-pill rounded-full px-4 py-2 text-sm text-[color:var(--muted)]">
                   {item.duration}
                 </span>
               </div>
-              <div className="mt-6 inline-flex rounded-full border border-white/10 bg-white/6 px-4 py-2 text-sm font-semibold">
+              <div className="surface-pill mt-6 inline-flex rounded-full px-4 py-2 text-sm font-semibold">
                 {item.score}
               </div>
             </div>

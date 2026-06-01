@@ -12,12 +12,22 @@
   --bg-soft: rgba(11, 21, 37, 0.78);
   --surface: rgba(255, 255, 255, 0.08);
   --surface-strong: rgba(255, 255, 255, 0.12);
+  --surface-soft: rgba(255, 255, 255, 0.06);
   --border: rgba(255, 255, 255, 0.14);
   --text: #f3f7ff;
   --muted: #a7b6cf;
   --accent: #7dd3fc;
   --accent-strong: #38bdf8;
+  --accent-soft: rgba(125, 211, 252, 0.14);
   --accent-warm: #f59e0b;
+  --accent-text: #c9efff;
+  --card-strong: rgba(2, 6, 23, 0.34);
+  --line-soft: rgba(255, 255, 255, 0.1);
+  --line-faint: rgba(255, 255, 255, 0.06);
+  --icon-soft: rgba(255, 255, 255, 0.08);
+  --overlay: rgba(2, 6, 23, 0.35);
+  --error: #fbbf24;
+  --success: #86efac;
   --shadow: 0 30px 90px rgba(2, 6, 23, 0.28);
   --gradient-main: radial-gradient(circle at top left, rgba(56, 189, 248, 0.22), transparent 34%),
     radial-gradient(circle at 80% 20%, rgba(244, 114, 182, 0.18), transparent 24%),
@@ -26,20 +36,30 @@
 
 .light {
   color-scheme: light;
-  --bg: #f3f7fb;
-  --bg-soft: rgba(255, 255, 255, 0.8);
-  --surface: rgba(255, 255, 255, 0.72);
-  --surface-strong: rgba(255, 255, 255, 0.92);
-  --border: rgba(15, 23, 42, 0.08);
-  --text: #0f172a;
-  --muted: #526076;
-  --accent: #0369a1;
+  --bg: #f5f8fc;
+  --bg-soft: rgba(255, 255, 255, 0.72);
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-strong: rgba(255, 255, 255, 0.94);
+  --surface-soft: rgba(255, 255, 255, 0.58);
+  --border: rgba(37, 99, 235, 0.12);
+  --text: #102033;
+  --muted: #567087;
+  --accent: #0f6ea8;
   --accent-strong: #0284c7;
+  --accent-soft: rgba(14, 116, 144, 0.1);
   --accent-warm: #d97706;
-  --shadow: 0 24px 70px rgba(15, 23, 42, 0.1);
-  --gradient-main: radial-gradient(circle at top left, rgba(14, 165, 233, 0.16), transparent 34%),
-    radial-gradient(circle at 80% 20%, rgba(249, 115, 22, 0.12), transparent 24%),
-    linear-gradient(135deg, #eff6ff 0%, #f8fafc 45%, #e2e8f0 100%);
+  --accent-text: #0b608d;
+  --card-strong: rgba(255, 255, 255, 0.6);
+  --line-soft: rgba(37, 99, 235, 0.12);
+  --line-faint: rgba(37, 99, 235, 0.08);
+  --icon-soft: rgba(14, 116, 144, 0.1);
+  --overlay: rgba(148, 163, 184, 0.22);
+  --error: #b45309;
+  --success: #15803d;
+  --shadow: 0 24px 70px rgba(37, 99, 235, 0.08);
+  --gradient-main: radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), transparent 32%),
+    radial-gradient(circle at 82% 18%, rgba(251, 146, 60, 0.1), transparent 24%),
+    linear-gradient(135deg, #f9fbff 0%, #eef5fb 48%, #e7eef7 100%);
 }
 
 html {
@@ -98,6 +118,10 @@ textarea {
   @apply mt-4 max-w-2xl text-sm leading-7 sm:text-base;
 }
 
+.section-eyebrow {
+  color: var(--accent-text);
+}
+
 .soft-grid {
   background-image:
     linear-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px),
@@ -110,4 +134,55 @@ textarea {
     0 0 0 1px rgba(255, 255, 255, 0.1),
     0 18px 40px rgba(14, 165, 233, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.surface-card {
+  background: var(--surface-soft);
+  border: 1px solid var(--line-soft);
+}
+
+.surface-pill {
+  background: var(--surface-soft);
+  border: 1px solid var(--line-soft);
+}
+
+.contrast-panel {
+  background: var(--card-strong);
+  border: 1px solid var(--line-soft);
+}
+
+.contrast-line {
+  background: var(--line-soft);
+}
+
+.accent-chip {
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+  color: var(--accent-text);
+}
+
+.accent-icon {
+  background: var(--icon-soft);
+  color: var(--accent-text);
+}
+
+.overlay-scrim {
+  background: var(--overlay);
+}
+
+.input-surface {
+  background: var(--surface-soft);
+  border: 1px solid var(--line-soft);
+}
+
+.input-surface:focus {
+  border-color: color-mix(in srgb, var(--accent) 48%, transparent);
+}
+
+.error-text {
+  color: var(--error);
+}
+
+.success-text {
+  color: var(--success);
 }

@@ -12,7 +12,7 @@ function TechnologyPopup({ technology, position, onClose }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-[60] bg-slate-950/35 backdrop-blur-[2px]"
+            className="overlay-scrim fixed inset-0 z-[60] backdrop-blur-[2px]"
             aria-label="Close technology details"
           />
           <motion.div
@@ -29,32 +29,32 @@ function TechnologyPopup({ technology, position, onClose }) {
           >
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
-                <p className="text-xs uppercase tracking-[0.24em] text-sky-300">{technology.category}</p>
+                <p className="section-eyebrow text-xs uppercase tracking-[0.24em]">{technology.category}</p>
                 <h3 className="mt-2 font-display text-2xl font-bold">{technology.name}</h3>
               </div>
               <button
                 type="button"
                 onClick={onClose}
-                className="shrink-0 rounded-full border border-white/10 bg-white/6 px-3 py-1 text-sm"
+                className="surface-pill shrink-0 rounded-full px-3 py-1 text-sm"
               >
                 Close
               </button>
             </div>
 
             <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
-              <div className="rounded-2xl border border-white/10 bg-white/6 p-3">
+              <div className="surface-card rounded-2xl p-3">
                 <div className="text-[color:var(--muted)]">Proficiency</div>
                 <div className="mt-2 font-semibold">{technology.proficiency}</div>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/6 p-3">
+              <div className="surface-card rounded-2xl p-3">
                 <div className="text-[color:var(--muted)]">Experience</div>
                 <div className="mt-2 font-semibold">{technology.experience}</div>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/6 p-3">
+              <div className="surface-card rounded-2xl p-3">
                 <div className="text-[color:var(--muted)]">Projects</div>
                 <div className="mt-2 font-semibold">{technology.projectCount}</div>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/6 p-3">
+              <div className="surface-card rounded-2xl p-3">
                 <div className="text-[color:var(--muted)]">Use cases</div>
                 <div className="mt-2 font-semibold">{technology.usage.length}</div>
               </div>
@@ -69,7 +69,7 @@ function TechnologyPopup({ technology, position, onClose }) {
               </ul>
             </div>
 
-            <div className="mt-5 rounded-2xl border border-white/10 bg-white/6 p-4 text-sm leading-6 text-[color:var(--muted)]">
+            <div className="surface-card mt-5 rounded-2xl p-4 text-sm leading-6 text-[color:var(--muted)]">
               {technology.notes}
             </div>
           </motion.div>

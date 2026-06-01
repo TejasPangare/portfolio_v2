@@ -5,7 +5,7 @@ import { certifications } from '../data/certifications'
 function Certifications() {
   return (
     <section id="certifications" className="section-shell py-14 sm:py-20">
-      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Certifications</p>
+      <p className="section-eyebrow text-sm font-semibold uppercase tracking-[0.24em]">Certifications</p>
       <h2 className="section-title mt-4">Credentials that reinforce my foundation and curiosity.</h2>
       <div className="mt-10 grid gap-6 lg:grid-cols-3">
         {certifications.map((certification, index) => (
@@ -26,9 +26,9 @@ function Certifications() {
                 <p className="text-sm text-[color:var(--muted)]">{certification.issuer}</p>
                 <h3 className="mt-3 font-display text-xl font-bold">{certification.title}</h3>
               </div>
-              <FiArrowUpRight className="text-lg text-sky-300" />
+              <FiArrowUpRight className="text-lg text-[color:var(--accent-text)]" />
             </div>
-            <div className="mt-6 rounded-2xl border border-white/10 bg-white/6 px-4 py-3 text-sm text-[color:var(--muted)]">
+            <div className="surface-card mt-6 rounded-2xl px-4 py-3 text-sm text-[color:var(--muted)]">
               Issued {certification.date}
             </div>
           </motion.a>

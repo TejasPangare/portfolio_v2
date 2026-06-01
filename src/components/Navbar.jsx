@@ -25,7 +25,7 @@ function Navbar({ activeSection, onNavClick, theme, toggleTheme }) {
     <motion.header
       initial={{ y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="sticky top-0 z-50 border-b border-white/10 bg-[color:var(--bg-soft)]/85 backdrop-blur-xl"
+      className="sticky top-0 z-50 border-b border-[color:var(--line-soft)] bg-[color:var(--bg-soft)]/85 backdrop-blur-xl"
     >
       <div className="section-shell py-4">
         <div className="flex items-center justify-between gap-4">
@@ -47,8 +47,8 @@ function Navbar({ activeSection, onNavClick, theme, toggleTheme }) {
                   onClick={() => handleNavClick(item.id)}
                   className={`rounded-full px-4 py-2 text-sm transition ${
                     isActive
-                      ? 'bg-white/12 shadow-[0_0_0_1px_rgba(255,255,255,0.12)]'
-                      : 'text-[color:var(--muted)] hover:bg-white/6 hover:text-[color:var(--text)]'
+                      ? 'surface-pill shadow-[0_0_0_1px_color-mix(in_srgb,var(--accent)_18%,transparent)]'
+                      : 'text-[color:var(--muted)] hover:bg-[color:var(--surface-soft)] hover:text-[color:var(--text)]'
                   }`}
                 >
                   {item.label}
@@ -60,7 +60,7 @@ function Navbar({ activeSection, onNavClick, theme, toggleTheme }) {
           <div className="flex items-center gap-2 sm:gap-3">
             <a
               href="/resume.pdf"
-              className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/8 px-4 py-2 text-sm font-semibold transition hover:scale-[1.02] sm:flex"
+              className="surface-pill hidden items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition hover:scale-[1.02] sm:flex"
             >
               <FiDownload />
               Resume
@@ -69,7 +69,7 @@ function Navbar({ activeSection, onNavClick, theme, toggleTheme }) {
               type="button"
               onClick={toggleTheme}
               aria-label="Toggle theme"
-              className="rounded-full border border-white/10 bg-white/8 p-3 transition hover:scale-105"
+              className="surface-pill rounded-full p-3 transition hover:scale-105"
             >
               {theme === 'dark' ? <FiSun /> : <FiMoon />}
             </button>
@@ -77,7 +77,7 @@ function Navbar({ activeSection, onNavClick, theme, toggleTheme }) {
               type="button"
               onClick={() => setIsMobileMenuOpen((open) => !open)}
               aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
-              className="rounded-full border border-white/10 bg-white/8 p-3 transition hover:scale-105 lg:hidden"
+              className="surface-pill rounded-full p-3 transition hover:scale-105 lg:hidden"
             >
               {isMobileMenuOpen ? <FiX /> : <FiMenu />}
             </button>
@@ -92,7 +92,7 @@ function Navbar({ activeSection, onNavClick, theme, toggleTheme }) {
               exit={{ opacity: 0, height: 0 }}
               className="overflow-hidden lg:hidden"
             >
-              <div className="mt-4 rounded-[1.75rem] border border-white/10 bg-white/6 p-4">
+              <div className="surface-card mt-4 rounded-[1.75rem] p-4">
                 <div className="grid gap-2">
                   {navItems.map((item) => {
                     const isActive = activeSection === item.id
@@ -104,7 +104,7 @@ function Navbar({ activeSection, onNavClick, theme, toggleTheme }) {
                         className={`rounded-2xl px-4 py-3 text-left text-sm transition ${
                           isActive
                             ? 'bg-[color:var(--accent-strong)] text-slate-950'
-                            : 'bg-white/6 text-[color:var(--text)]'
+                            : 'bg-[color:var(--surface-soft)] text-[color:var(--text)]'
                         }`}
                       >
                         {item.label}
@@ -113,7 +113,7 @@ function Navbar({ activeSection, onNavClick, theme, toggleTheme }) {
                   })}
                   <a
                     href="/resume.pdf"
-                    className="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/8 px-4 py-3 text-sm font-semibold"
+                    className="surface-pill mt-2 inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold"
                   >
                     <FiDownload />
                     Resume

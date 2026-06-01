@@ -128,7 +128,7 @@ function TechUniverse() {
 
   return (
     <section id="skills" className="section-shell py-14 sm:py-20">
-      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Tech Stack Universe</p>
+      <p className="section-eyebrow text-sm font-semibold uppercase tracking-[0.24em]">Tech Stack Universe</p>
       <h2 className="section-title mt-4">An interactive map of the tools I use to ship products.</h2>
       <p className="section-copy">
         Explore the stack behind my work, from polished frontend delivery to backend systems and AI integrations.
@@ -146,7 +146,7 @@ function TechUniverse() {
                 onClick={(event) => handleSelect(technology, event)}
                 className="glass-panel flex min-h-24 flex-col items-center justify-center gap-3 rounded-[1.6rem] p-4 text-center"
               >
-                <span className="text-3xl text-sky-300">
+                <span className="text-3xl text-[color:var(--accent-text)]">
                   <Icon />
                 </span>
                 <span className="text-sm font-semibold">{technology.name}</span>
@@ -159,8 +159,8 @@ function TechUniverse() {
       <div className="relative mt-12 hidden h-[44rem] md:block">
         <div className="glass-panel absolute inset-0 overflow-hidden rounded-[2.4rem] border border-white/10">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.12),transparent_45%)]" />
-          <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/8" />
-          <div className="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/6" />
+          <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[color:var(--line-soft)]" />
+          <div className="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[color:var(--line-faint)]" />
           <svg className="absolute inset-0 h-full w-full opacity-45" preserveAspectRatio="none">
             {connections.map((line) => (
               <line

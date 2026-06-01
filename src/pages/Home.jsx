@@ -70,7 +70,7 @@ function Home() {
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.45 } }}
-            className="pointer-events-none fixed inset-0 z-[80] flex items-center justify-center bg-slate-950/35 backdrop-blur-[2px]"
+            className="overlay-scrim pointer-events-none fixed inset-0 z-[80] flex items-center justify-center backdrop-blur-[2px]"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -85,7 +85,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="relative mt-6 h-24 rounded-[1.5rem] border border-white/10 bg-white/6">
+              <div className="surface-card relative mt-6 h-24 rounded-[1.5rem]">
                 <motion.div
                   animate={{ x: ['-10%', '72%', '18%'] }}
                   transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
